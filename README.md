@@ -65,15 +65,17 @@ But he isn't sure, and I think it's just for the elegant beauty of the binary
 case. If you know the answer, please email me.
 
 ILLUSTRATIVE INDICES AND THEIR D-ARY PARENTS
+```
 Index:  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 ...
 2-ary:  -  0  0  1  1  2  2  3  3  4  4  5  5  6  6  7  7  8  8  9  9 10 ...
 4-ary:  -  0  0  0  0  1  1  1  1  2  2  2  2  3  3  3  3  4  4  4  4  5 ...
 8-ary:  -  0  0  0  0  0  0  0  0  1  1  1  1  1  1  1  1  2  2  2  2  2 ...
+```
 
-EXAMPLES
-2-ary parent of item 14 is at (14-1)>>1 == 6.
-4-ary parent of item 17 is at (17-1)>>2 == 4.
-8-ary parent of item 21 is at (21-1)>>3 == 2.
+### Examples
+- 2-ary parent of item 14 is at (14-1)>>1 == 6.
+- 4-ary parent of item 17 is at (17-1)>>2 == 4.
+- 8-ary parent of item 21 is at (21-1)>>3 == 2.
 These all match with Fact 1.
 
 Wayne and Sedgewick point out this can be optimized by replacing full

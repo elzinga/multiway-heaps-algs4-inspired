@@ -1,5 +1,6 @@
 # multiway-heaps-algs4-inspired
 Priority queues implemented with multiway heaps. Includes max, min orientations; generic, indexed-generic flavors.
+ 
  Generic max priority queue implementation with a d-ary heap. This
  variation specifically supports d equal to any positive integer.
  Implementation note: A version was written using all bit-shift operations

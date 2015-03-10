@@ -1,17 +1,23 @@
 # multiway-heaps-algs4-inspired
 Priority queues implemented with a multiway heap, often called _d_-ary heap:
 
-Six classes form the heart of this project:
+Four classes form the heart of this project:
 - Max and min orientations, as traditional for priority queues.
 - Fully generic versions…
 - And at Kevin Wayne's suggestion, I've also added an indexed-generic flavor useful for certain algorithms where the keys are naturally in an array, a la http://algs4.cs.princeton.edu/24pq/IndexMinPQ.java.html (for use with Dijkstra’s algorithm and Prim’s algorithm).
-
-This version specifically supports d equal to any positive integer.
-
+- Testing classes, displaying an event-driven elastic collision simulator for N particles.
 *Implementation note:* A version was tried using all bit-shift operations
 instead of multiplication and division (to compute child and parent
 nodes). Surprisingly, empirical tests showed this worsened performance. 
 I'm not sure why, if you know the answer, please contact the author.
+
+This version supports heap width _d_, any positive integer.
+
+*Notation:* We write informally N^^2 for "N to the power 2". This avoids confusion with
+2^p which means "2 bitwise-XOR with p" in Java, and 2**p, which is FORTRAN-friendly but awkward
+notation for programmers steeped in C pointers. Using Java bit-shift
+operations, raising 2 to the power p is D. Multiplying k times 2 to the
+p is (k << p). So the informal notation 2^^p is written in Java as (1 << p).
 
 *Degenerate case:* This implementation works even for width==1, which makes a
 degenerate "unary heap", approximately equivalent to insertion sort stored
@@ -21,12 +27,6 @@ not useful in practice, as it takes O(N^^2) for tasks that should require
 O(NlgN). But it makes a neat edge case, and like the proverbial dancing
 pig, it's less interesting how well it performs than that it performs at
 all.
-
-*Notation:* We write informally N^^2 for "N to the power 2". This avoids confusion with
-2^p which means "2 bitwise-XOR with p" in Java, and 2**p, which is FORTRAN-friendly but awkward
-notation for programmers steeped in C pointers. Using Java bit-shift
-operations, raising 2 to the power p is D. Multiplying k times 2 to the
-p is (k << p). So the informal notation 2^^p is written in Java as (1 << p).
 
 As in Robert Sedgewick & Kevin Wayne's binary heap implementation, this can
 be used with a comparator instead of the natural order, but the generic Key
